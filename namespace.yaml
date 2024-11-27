@@ -1,6 +1,10 @@
 apiVersion: v1
-kind: Namespace
+kind: Pod
 metadata:
-  name: production
-  labels:
-    name: production
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
